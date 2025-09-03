@@ -5,4 +5,5 @@ A Django-based travel listing platform with REST API, SQLite, Swagger docs, and 
 ## 🚀 Live API Documentation
 
 You can view the Swagger docs here:  
-👉 [Swagger UI on PythonAnywhere](https://deniskiprotich749.pythonanywhere.com/swagger/)
+👉 [https://deniskiprotich749.pythonanywhere.com/swagger/](https://deniskiprotich749.pythonanywhere.com/swagger/)
+
