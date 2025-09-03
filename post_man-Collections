@@ -1,0 +1,396 @@
+{
+	"info": {
+		"_postman_id": "39faed30-a233-49ed-aac2-f7c2a7211171",
+		"name": "Listing & Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39570890"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"Too\",\r\n  \"email\": \"deniskiprotich749@gmail.com\",\r\n  \"first_name\": \"Denis\",\r\n  \"last_name\": \"Kiprotich\",\r\n  \"password\": \"Too*#\",\r\n  \"role\": \"host\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"Too\",\r\n  \"password\": \"Too*#\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listings",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2ODk0MzA0LCJpYXQiOjE3NTY4OTA3MDQsImp0aSI6IjVjOGVjMzc0MTFlZDRlZDhhZmFmNDNhMzQ2ODE4NjBkIiwidXNlcl9pZCI6IjU4Y2FjNTU3LTAwZjEtNDJiYi1iOGZlLTcyOWUzY2M5OTI0MCJ9.CEWH5DUePvT3WU694Rcn0RZsCPguX9ryjvGnvQHUjZk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Cozy Apartment in Nairobi\",\r\n    \"description\": \"A lovely 2-bedroom apartment near the CBD.\",\r\n    \"location\": \"Nairobi, Kenya\",\r\n    \"price_per_night\": \"4500.00\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/listings/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"listings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Listing",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2ODk0MzA0LCJpYXQiOjE3NTY4OTA3MDQsImp0aSI6IjVjOGVjMzc0MTFlZDRlZDhhZmFmNDNhMzQ2ODE4NjBkIiwidXNlcl9pZCI6IjU4Y2FjNTU3LTAwZjEtNDJiYi1iOGZlLTcyOWUzY2M5OTI0MCJ9.CEWH5DUePvT3WU694Rcn0RZsCPguX9ryjvGnvQHUjZk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/listings/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"listings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2ODk0MzA0LCJpYXQiOjE3NTY4OTA3MDQsImp0aSI6IjVjOGVjMzc0MTFlZDRlZDhhZmFmNDNhMzQ2ODE4NjBkIiwidXNlcl9pZCI6IjU4Y2FjNTU3LTAwZjEtNDJiYi1iOGZlLTcyOWUzY2M5OTI0MCJ9.CEWH5DUePvT3WU694Rcn0RZsCPguX9ryjvGnvQHUjZk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"start_date\": \"2025-09-03T14:00:00Z\",\r\n  \"end_date\": \"2025-09-08T10:00:00Z\",\r\n  \"total_price\": \"4500.00\",\r\n  \"status\": \"confirmed\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/listings/1/bookings/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"listings",
+						"1",
+						"bookings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2ODk0MzA0LCJpYXQiOjE3NTY4OTA3MDQsImp0aSI6IjVjOGVjMzc0MTFlZDRlZDhhZmFmNDNhMzQ2ODE4NjBkIiwidXNlcl9pZCI6IjU4Y2FjNTU3LTAwZjEtNDJiYi1iOGZlLTcyOWUzY2M5OTI0MCJ9.CEWH5DUePvT3WU694Rcn0RZsCPguX9ryjvGnvQHUjZk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/listings/1/bookings/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"listings",
+						"1",
+						"bookings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2ODk0MzA0LCJpYXQiOjE3NTY4OTA3MDQsImp0aSI6IjVjOGVjMzc0MTFlZDRlZDhhZmFmNDNhMzQ2ODE4NjBkIiwidXNlcl9pZCI6IjU4Y2FjNTU3LTAwZjEtNDJiYi1iOGZlLTcyOWUzY2M5OTI0MCJ9.CEWH5DUePvT3WU694Rcn0RZsCPguX9ryjvGnvQHUjZk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\": \"4500.00\",\r\n  \"currency\": \"KES\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/listings/1/bookings/1/payments/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"listings",
+						"1",
+						"bookings",
+						"1",
+						"payments",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2ODk0MzA0LCJpYXQiOjE3NTY4OTA3MDQsImp0aSI6IjVjOGVjMzc0MTFlZDRlZDhhZmFmNDNhMzQ2ODE4NjBkIiwidXNlcl9pZCI6IjU4Y2FjNTU3LTAwZjEtNDJiYi1iOGZlLTcyOWUzY2M5OTI0MCJ9.CEWH5DUePvT3WU694Rcn0RZsCPguX9ryjvGnvQHUjZk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\": \"480.00\",\r\n  \"currency\": \"ETB\",\r\n  \"email\": \"deniskiprotich74000@gmail.com\",\r\n  \"first_name\": \"Denis\",\r\n  \"last_name\": \"Kiprotich\",\r\n  \"phone_number\": \"0911223344\" \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/listings/1/bookings/1/payments/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"listings",
+						"1",
+						"bookings",
+						"1",
+						"payments",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify Payment",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2ODk0MzA0LCJpYXQiOjE3NTY4OTA3MDQsImp0aSI6IjVjOGVjMzc0MTFlZDRlZDhhZmFmNDNhMzQ2ODE4NjBkIiwidXNlcl9pZCI6IjU4Y2FjNTU3LTAwZjEtNDJiYi1iOGZlLTcyOWUzY2M5OTI0MCJ9.CEWH5DUePvT3WU694Rcn0RZsCPguX9ryjvGnvQHUjZk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"transaction_id\": \"1c224dcc-ea94-4eea-ac01-680a80d3be42\",\r\n  \"status\": \"Completed\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/listings/1/bookings/1/payments/verify/?tx_ref=8fb81f3f-03cb-46c5-9011-b7bc4d9b361b",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"listings",
+						"1",
+						"bookings",
+						"1",
+						"payments",
+						"verify",
+						""
+					],
+					"query": [
+						{
+							"key": "tx_ref",
+							"value": "8fb81f3f-03cb-46c5-9011-b7bc4d9b361b"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
